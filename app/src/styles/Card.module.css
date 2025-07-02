@@ -1,0 +1,27 @@
+.card {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mapImage {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.mapName {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}

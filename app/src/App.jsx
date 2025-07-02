@@ -1,10 +1,11 @@
 import './App.css'
+import Home from './Pages/Home'
 
 function App() {
 
   return (
     <>
-      this is the app
+      <Home />
     </>
   )
 }

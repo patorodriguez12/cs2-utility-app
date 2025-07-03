@@ -12,7 +12,7 @@ const Home = () => {
 
   return (
     <div className={styles.homeContainer}>
-      <h1 className={styles.title}>?</h1>
+      <h1 className={styles.title}>Elegi el mapa</h1>
       <div className={styles.mapList}>
         {maps.map((map) => (
           <Card

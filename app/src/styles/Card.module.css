@@ -34,7 +34,7 @@
 /* Mostrar el logo en hover */
 .card:hover img:nth-of-type(2) {
   opacity: 1;
-  transform: translate(-50%, -50%) scale(1.05);
+  transform: translate(-50%, -50%) scale(2);
 }
 
 .mapName {
@@ -51,7 +51,7 @@
 @media (max-width: 600px) {
   .card img:nth-of-type(2) {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1.05);
+    transform: translate(-50%, -50%) scale(1.8);
   }
 
   .card .mapImage:first-of-type {

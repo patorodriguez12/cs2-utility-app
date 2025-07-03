@@ -1,10 +1,13 @@
 import Card from "../components/Card";
 import styles from "../styles/Home.module.css";
 import { maps } from "../utils/maps";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-  const handleClick = (mapName) => {
-    console.log(`Navegar a los detalles de ${mapName}`);
+  const navigate = useNavigate();
+
+  const handleClick = (mapId) => {
+    navigate(`/map/${mapId}`);
   };
 
   return (
@@ -17,7 +20,7 @@ const Home = () => {
             name={map.name}
             image={map.image}
             logo={map.logo}
-            onClick={() => handleClick(map.name)}
+            onClick={() => handleClick(map.id)}
           />
         ))}
       </div>

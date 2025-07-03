@@ -1,37 +1,37 @@
 import React from "react";
-import Card from "../components/Card"
-import styles from "../styles/Home.module.css"
+import Card from "../components/Card";
+import styles from "../styles/Home.module.css";
 
 const maps = [
   {
     name: "Mirage",
-    image: "./assets/mirage.webp",
-    logo: "./assets/mirage-logo.webp",
+    image: "https://i.imgur.com/xo39TBZ.png",
+    logo: "https://i.imgur.com/UOptav1.png",
   },
   {
     name: "Dust 2",
-    image: "./assets/dust2.webp",
-    logo: "./assets/dust2-logo.webp",
+    image: "https://i.imgur.com/MiqrSGw.png",
+    logo: "https://i.imgur.com/IpyVurw.png",
   },
   {
     name: "Nuke",
-    image: "./assets/nuke.webp",
-    logo: "./assets/nuke-logo.webp",
+    image: "https://i.imgur.com/u2ekRvE.png",
+    logo: "https://i.imgur.com/qG5NZSx.png",
   },
   {
     name: "Inferno",
-    image: "./assets/inferno.webp",
-    logo: "./assets/inferno-logo.webp",
+    image: "https://i.imgur.com/NiouVuk.png",
+    logo: "https://i.imgur.com/iC6zY71.png",
   },
   {
     name: "Anubis",
-    image: "./assets/anubis.webp",
-    logo: "./assets/anubis-logo.webp",
+    image: "https://i.imgur.com/r97TdZt.png",
+    logo: "https://i.imgur.com/H3RvNUe.png",
   },
   {
     name: "Ancient",
-    image: "./assets/ancient.webp",
-    logo: "./assets/ancient-logo.webp",
+    image: "https://i.imgur.com/Y8xyA6z.png",
+    logo: "https://i.imgur.com/GRuFjE1.png",
   },
 ];
 
@@ -50,6 +50,7 @@ const Home = () => {
             key={map.name}
             name={map.name}
             image={map.image}
+            logo={map.logo}
             onClick={() => handleClick(map.name)}
           />
         ))}

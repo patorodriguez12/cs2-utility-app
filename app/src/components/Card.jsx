@@ -4,7 +4,7 @@ const Card = ({ name, image, logo, onClick }) => {
   return (
     <div className={styles.card} onClick={onClick}>
       <img src={image} alt={name} className={styles.mapImage} />
-      <img src={logo} alt={name} className={styles.mapImage} />
+      <img src={logo} alt={name} />
       <h3 className={styles.mapName}>{name}</h3>
     </div>
   );

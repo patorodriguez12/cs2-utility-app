@@ -37,13 +37,12 @@ const maps = [
 
 const Home = () => {
   const handleClick = (mapName) => {
-    // Aquí redirigirías a la página de detalles del mapa
     console.log(`Navegar a los detalles de ${mapName}`);
   };
 
   return (
     <div className={styles.homeContainer}>
-      <h1 className={styles.title}>Mapas de Counter Strike 2</h1>
+      <h1 className={styles.title}>?</h1>
       <div className={styles.mapList}>
         {maps.map((map) => (
           <Card

@@ -4,5 +4,6 @@ export const tips = [
     mapId: "mirage",
     title: "Tip 1 para mirage",
     videoUrl: "...",
+    type: "molotov",
   },
 ];

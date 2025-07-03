@@ -7,7 +7,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   const handleClick = (mapId) => {
-    navigate(`/map/${mapId}`);
+    navigate(`/${mapId}`);
   };
 
   return (

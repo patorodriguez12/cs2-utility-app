@@ -18,7 +18,7 @@
   margin: 0 auto;
 }
 
-/* Card  */
+/* Card empieza aqui */
 .typeCard {
   position: relative;
   width: 300px;
@@ -36,7 +36,6 @@
   transition: filter 0.3s ease;
 }
 
-/* Fondo oscurecido en hover */
 .typeCard:hover .background:first-of-type {
   filter: brightness(60%);
 }
@@ -52,7 +51,6 @@
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Mostrar logo en hover */
 .typeCard:hover img:nth-of-type(2) {
   opacity: 1;
   transform: translate(-50%, -50%) scale(2);
@@ -71,25 +69,21 @@
   z-index: 2;
 }
 
-/* Ocultar el nombre al hacer hover */
 .typeCard:hover .typeName {
   opacity: 0;
 }
 
-/* Responsive ajuste en móviles */
-@media (max-width: 480px) {
-  .typeCard {
-    width: 120px;
-    height: 140px;
-    padding: 15px;
-  }
+/* Card termina aqui */
 
-  .typeCard img {
-    width: 52px;
-    height: 52px;
+/* Responsive */
+@media (max-width: 900px) {
+  .typeList {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  .typeCard span {
-    font-size: 1rem;
+@media (max-width: 600px) {
+  .typeList {
+    grid-template-columns: 1fr;
   }
 }

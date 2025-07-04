@@ -18,6 +18,7 @@
   margin: 0 auto;
 }
 
+/* Responsive */
 @media (max-width: 900px) {
   .mapList {
     grid-template-columns: repeat(2, 1fr);

@@ -8,55 +8,62 @@
   min-height: 100vh;
 }
 
+/* Card  */
 .typeCard {
-  background: #1f1f1f;
-  border-radius: 20px;
-  padding: 20px 15px;
-  width: 140px;
-  height: 160px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 5px 5px 15px #0a0a0a, -5px -5px 15px #2a2a2a;
   position: relative;
+  width: 300px;
+  height: 200px;
+  cursor: pointer;
   overflow: hidden;
+  border-radius: 12px;
 }
 
-.typeCard::before {
-  content: "";
+.typeCard .background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.3s ease;
+}
+
+/* Fondo oscurecido en hover */
+.typeCard:hover .background:first-of-type {
+  filter: brightness(60%);
+}
+
+.typeCard img:nth-of-type(2) {
   position: absolute;
-  inset: 0;
-  background: radial-gradient(circle, rgba(0, 255, 213, 0.15), transparent 70%);
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 80px;
+  transform: translate(-50%, -50%);
   opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.typeCard:hover::before {
+/* Mostrar logo en hover */
+.typeCard:hover img:nth-of-type(2) {
   opacity: 1;
+  transform: translate(-50%, -50%) scale(2);
 }
 
-.typeCard:hover {
-  transform: translateY(-5px) scale(1.03);
-  box-shadow: 0 0 20px rgba(0, 255, 213, 0.5);
+.typeName {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  font-weight: bold;
+  color: #202337;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  z-index: 2;
 }
 
-.typeCard img {
-  width: 64px;
-  height: 64px;
-  object-fit: contain;
-  margin-bottom: 10px;
-  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
-}
-
-.typeCard span {
-  color: #00ffd5;
-  font-weight: 600;
-  font-size: 1.1rem;
-  text-shadow: 0 0 3px #000;
+/* Ocultar el nombre al hacer hover */
+.typeCard:hover .typeName {
+  opacity: 0;
 }
 
 /* Responsive ajuste en móviles */

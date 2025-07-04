@@ -15,7 +15,6 @@
   transition: filter 0.3s ease;
 }
 
-/* Fondo oscurecido en hover */
 .card:hover .mapImage:first-of-type {
   filter: brightness(60%);
 }
@@ -31,7 +30,6 @@
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Mostrar el logo en hover */
 .card:hover img:nth-of-type(2) {
   opacity: 1;
   transform: translate(-50%, -50%) scale(2);

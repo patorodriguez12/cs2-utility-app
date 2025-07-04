@@ -86,4 +86,17 @@
   .typeList {
     grid-template-columns: 1fr;
   }
+
+  .typeCard img:nth-of-type(2) {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.8);
+  }
+
+  .typeCard .background:first-of-type {
+    filter: brightness(60%);
+  }
+
+  .typeName {
+    opacity: 0;
+  }
 }

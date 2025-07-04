@@ -1,6 +1,7 @@
 import { useNavigate, useParams } from "react-router";
 import { maps } from "../utils/maps";
 import { types } from "../utils/types";
+import styles from "../styles/MapDetail.module.css";
 
 const MapDetail = () => {
   const navigate = useNavigate();
@@ -14,18 +15,17 @@ const MapDetail = () => {
   };
 
   return (
-    <div>
-      <h1>Tips para {map.name}</h1>
-      <h2>Elegi un tipo</h2>
-      <ul>
-        {types.map((type) => (
-          <li key={type.id}>
-            <button onClick={() => handleTipTypeClick(type.id)}>
-              {type.name}
-            </button>
-          </li>
-        ))}
-      </ul>
+    <div className={styles.typeGrid}>
+      {types.map((type) => (
+        <div
+          key={type.id}
+          className={styles.typeCard}
+          onClick={() => handleTipTypeClick(type.id)}
+        >
+          <img src={type.imgUrl} alt={type.name} />
+          <span>{type.name}</span>
+        </div>
+      ))}
     </div>
   );
 };

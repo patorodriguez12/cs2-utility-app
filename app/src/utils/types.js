@@ -2,21 +2,21 @@ export const types = [
   {
     id: "flashbang",
     name: "Fbs",
-    imgUrl: "...",
+    imgUrl: "https://i.imgur.com/4pjWMCL.png",
   },
   {
     id: "smoke",
     name: "Humos",
-    imgUrl: "...",
+    imgUrl: "https://i.imgur.com/gRKNA0k.png",
   },
   {
     id: "he",
     name: "Detos",
-    imgUrl: "...",
+    imgUrl: "https://i.imgur.com/yMZIGXg.png",
   },
   {
     id: "molotov",
     name: "Molos",
-    imgUrl: "...",
+    imgUrl: "https://i.imgur.com/EDJAajH.png",
   },
 ];

@@ -1,0 +1,78 @@
+.typeGrid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.typeCard {
+  background: #1f1f1f;
+  border-radius: 20px;
+  padding: 20px 15px;
+  width: 140px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 5px 5px 15px #0a0a0a, -5px -5px 15px #2a2a2a;
+  position: relative;
+  overflow: hidden;
+}
+
+.typeCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(0, 255, 213, 0.15), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.typeCard:hover::before {
+  opacity: 1;
+}
+
+.typeCard:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 0 20px rgba(0, 255, 213, 0.5);
+}
+
+.typeCard img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
+.typeCard span {
+  color: #00ffd5;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-shadow: 0 0 3px #000;
+}
+
+/* Responsive ajuste en móviles */
+@media (max-width: 480px) {
+  .typeCard {
+    width: 120px;
+    height: 140px;
+    padding: 15px;
+  }
+
+  .typeCard img {
+    width: 52px;
+    height: 52px;
+  }
+
+  .typeCard span {
+    font-size: 1rem;
+  }
+}

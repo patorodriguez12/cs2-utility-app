@@ -73,6 +73,23 @@
   opacity: 0;
 }
 
+.backButton {
+  background-color: orange;
+  font-family: "Orbitron", sans-serif;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 2rem;
+  cursor: pointer;
+  margin: 20px;
+  transition: all 0.3s ease;
+}
+
+.backButton:hover {
+  background-color: orangered;
+  color: #fff;
+}
+
 /* Card termina aqui */
 
 /* Responsive */

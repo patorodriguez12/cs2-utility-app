@@ -34,6 +34,9 @@ const MapDetail = () => {
           </div>
         ))}
       </div>
+      <button className={styles.backButton} onClick={() => navigate(-1)}>
+        ⬅ Atras
+      </button>
     </div>
   );
 };

@@ -16,7 +16,7 @@ const MapDetail = () => {
 
   return (
     <div className={styles.typeContainer}>
-      <h1 className={styles.title}>Elegi la utilidad</h1>
+      <h1 className={styles.title}>Elegi la utilidad para <i>{map.name}</i></h1>
       <div className={styles.typeList}>
         {types.map((type) => (
           <div

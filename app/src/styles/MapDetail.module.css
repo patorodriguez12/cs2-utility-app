@@ -9,6 +9,10 @@
   color: #fff;
 }
 
+.title i {
+  color: orange;
+}
+
 .typeList {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

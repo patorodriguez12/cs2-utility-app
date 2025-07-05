@@ -93,41 +93,6 @@
   background-color: orangered;
   color: #fff;
 }
-
-.loadingOverlay {
-  position: absolute;
-  inset: 0;
-  background-color: #e0e0e0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-}
-
-.spinner {
-  width: 32px;
-  height: 32px;
-  border: 4px solid #ccc;
-  border-top-color: #555;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.loaded {
-  opacity: 1;
-  transform: opacity 0.5s ease;
-}
-
-.hidden {
-  opacity: 0;
-}
-
 /* Card termina aqui */
 
 /* Responsive */

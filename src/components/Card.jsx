@@ -6,11 +6,14 @@ const Card = ({ name, image, logo, onClick }) => {
 
   return (
     <div className={styles.card} onClick={onClick}>
+      {/* Loading Placeholder */}
       {!loaded && (
         <div className={styles.loadingOverlay}>
           <div className={styles.spinner}></div>
         </div>
       )}
+
+      {/* Imagen principal con transición de opacidad */}
       <img
         src={image}
         alt={name}
@@ -19,6 +22,8 @@ const Card = ({ name, image, logo, onClick }) => {
         }`}
         onLoad={() => setLoaded(true)}
       />
+
+      {/* Logo (hover effect) */}
       <img src={logo} alt={name} />
     </div>
   );

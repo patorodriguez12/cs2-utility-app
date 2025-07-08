@@ -21,13 +21,6 @@ export const tips = [
     type: "smoke",
   },
   {
-    id: 3,
-    mapId: "mirage",
-    title: "Liga desde TT",
-    videoUrl: "https://www.youtube.com/watch?v=842guiSfdVw",
-    type: "smoke",
-  },
-  {
     id: 4,
     mapId: "mirage",
     title: "L desde TT",

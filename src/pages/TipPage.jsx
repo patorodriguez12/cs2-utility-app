@@ -20,54 +20,56 @@ const TipPage = () => {
   if (!map || !type) return <div>Error: datos inválidos.</div>;
 
   return (
-    <div className={styles.container}>
+    <div className={styles.tipContainer}>
       <h1 className={styles.title}>
-        {type.name}s en {map.name}
+        {type.name} en <i>{map.name}</i>
       </h1>
 
-      {filteredTips.map((tip) => {
-        const youtubeId = new URL(tip.videoUrl).searchParams.get("v");
+      <div className={styles.tipList}>
+        {filteredTips.map((tip) => {
+          const youtubeId = new URL(tip.videoUrl).searchParams.get("v");
 
-        return (
-          <div
-            key={tip.id}
-            className={styles.card}
-            onClick={() => setActiveVideo(youtubeId)}
-          >
-            <img
-              src={`https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`}
-              alt={tip.title}
-              className={styles.thumbnail}
-            />
-            <p className={styles.caption}>{tip.title}</p>
-          </div>
-        );
-      })}
-      {activeVideo && (
-        <div
-          className={styles.modalOverlay}
-          onClick={() => setActiveVideo(null)}
-        >
-          <div
-            className={styles.modalContent}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              className={styles.closeButton}
-              onClick={() => setActiveVideo(null)}
+          return (
+            <div
+              key={tip.id}
+              className={styles.card}
+              onClick={() => setActiveVideo(youtubeId)}
             >
-              ✕
-            </button>
-            <iframe
-              src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1`}
-              frameBorder="0"
-              allow="autoplay; encrypted-media"
-              allowFullScreen
-              title="Video grande"
-            ></iframe>
+              <img
+                src={`https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`}
+                alt={tip.title}
+                className={styles.thumbnail}
+              />
+              <p className={styles.caption}>{tip.title}</p>
+            </div>
+          );
+        })}
+        {activeVideo && (
+          <div
+            className={styles.modalOverlay}
+            onClick={() => setActiveVideo(null)}
+          >
+            <div
+              className={styles.modalContent}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                className={styles.closeButton}
+                onClick={() => setActiveVideo(null)}
+              >
+                ✕
+              </button>
+              <iframe
+                src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1`}
+                frameBorder="0"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+                title="Video grande"
+              ></iframe>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };

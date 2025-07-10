@@ -1,3 +1,6 @@
+// ─── Components ────────────────────────────────────────────
+import NotFound from "./NotFound";
+
 // ─── External Packages ─────────────────────────────────────
 import { useNavigate, useParams } from "react-router";
 
@@ -14,7 +17,7 @@ const TipSelectPage = () => {
   const { mapId } = useParams();
   const map = maps.find((m) => m.id === mapId);
 
-  if (!map) return <div>Mapa no encontrado!</div>;
+  if (!map) return <NotFound />;
 
   const handleTipTypeClick = (typeId) => {
     navigate(`/${mapId}/${typeId}`);

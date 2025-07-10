@@ -1,6 +1,7 @@
 // ─── Components ────────────────────────────────────────────
 import TipCard from "../components/TipCard";
 import TipVideoModal from "../components/TipVideoModal";
+import NotFound from "./NotFound";
 
 // ─── Data (JSON) ───────────────────────────────────────────
 import { tips } from "../utils/tips";
@@ -29,7 +30,7 @@ const TipPage = () => {
     (tip) => tip.mapId === mapId && tip.type === typeId
   );
 
-  if (!map || !type) return <div>Error: datos inválidos.</div>;
+  if (!map || !type) return <NotFound />;
 
   return (
     <div className={styles.tipContainer}>

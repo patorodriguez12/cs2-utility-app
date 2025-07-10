@@ -18,10 +18,10 @@
 /* ─── List ──────────────────────────────────────────────── */
 .tipList {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   justify-items: center;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -93,4 +93,19 @@
   color: white;
   cursor: pointer;
   z-index: 10;
+}
+
+/* ─── Media Queries ──────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .modalContent {
+    width: 100%;
+    aspect-ratio: auto;
+    height: 60vh;
+  }
 }

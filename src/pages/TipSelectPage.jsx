@@ -21,8 +21,15 @@ const TipSelectPage = () => {
 
   return (
     <div className={styles.typeContainer}>
+      {/* Back Button */}
+      <button className={styles.backButton} onClick={() => navigate(-1)}>
+        ⬅
+      </button>
+
       {/* Title */}
-      <h1 className={styles.title}>Elegi la utilidad para <i>{map.name}</i></h1>
+      <h1 className={styles.title}>
+        Elegi la utilidad para <i>{map.name}</i>
+      </h1>
 
       {/* Tip List */}
       <div className={styles.typeList}>
@@ -42,11 +49,6 @@ const TipSelectPage = () => {
           </div>
         ))}
       </div>
-
-      {/* Back Button */}
-      <button className={styles.backButton} onClick={() => navigate(-1)}>
-        ⬅ Atras
-      </button>
     </div>
   );
 };

@@ -1,8 +1,10 @@
+/* ─── Container ──────────────────────────────────────────────── */
 .typeContainer {
   padding: 40px 20px;
   text-align: center;
 }
 
+/* ─── Title ──────────────────────────────────────────────── */
 .title {
   font-size: 2.5rem;
   margin-bottom: 40px;
@@ -13,6 +15,7 @@
   color: orange;
 }
 
+/* ─── List ──────────────────────────────────────────────── */
 .typeList {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -22,7 +25,7 @@
   margin: 0 auto;
 }
 
-/* Card empieza aqui */
+/* ─── Card ──────────────────────────────────────────────── */
 .typeCard {
   position: relative;
   width: 300px;
@@ -77,6 +80,7 @@
   opacity: 0;
 }
 
+/* ─── Back Button ──────────────────────────────────────────────── */
 .backButton {
   background-color: orange;
   font-family: "Orbitron", sans-serif;
@@ -93,9 +97,8 @@
   background-color: orangered;
   color: #fff;
 }
-/* Card termina aqui */
 
-/* Responsive */
+/* ─── Media Queries ──────────────────────────────────────────────── */
 @media (max-width: 900px) {
   .typeList {
     grid-template-columns: repeat(2, 1fr);

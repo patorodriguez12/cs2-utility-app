@@ -1,9 +1,14 @@
+// ─── External Packages ─────────────────────────────────────
 import { useNavigate, useParams } from "react-router";
+
+// ─── Data (JSON) ───────────────────────────────────────────
 import { maps } from "../utils/maps";
 import { types } from "../utils/types";
-import styles from "../styles/MapDetail.module.css";
 
-const MapDetail = () => {
+// ─── Styles ────────────────────────────────────────────────
+import styles from "../styles/TipSelectPage.module.css";
+
+const TipSelectPage = () => {
   const navigate = useNavigate();
   const { mapId } = useParams();
   const map = maps.find((m) => m.id === mapId);
@@ -16,7 +21,10 @@ const MapDetail = () => {
 
   return (
     <div className={styles.typeContainer}>
+      {/* Title */}
       <h1 className={styles.title}>Elegi la utilidad para <i>{map.name}</i></h1>
+
+      {/* Tip List */}
       <div className={styles.typeList}>
         {types.map((type) => (
           <div
@@ -34,6 +42,8 @@ const MapDetail = () => {
           </div>
         ))}
       </div>
+
+      {/* Back Button */}
       <button className={styles.backButton} onClick={() => navigate(-1)}>
         ⬅ Atras
       </button>
@@ -41,4 +51,4 @@ const MapDetail = () => {
   );
 };
 
-export default MapDetail;
+export default TipSelectPage;

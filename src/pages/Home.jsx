@@ -24,6 +24,7 @@ const Home = () => {
           />
         ))}
       </div>
+      <p className={styles.version}>Versión: BETA 0.1.0</p>
     </div>
   );
 };

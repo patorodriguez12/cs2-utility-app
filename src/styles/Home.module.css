@@ -18,6 +18,14 @@
   margin: 0 auto;
 }
 
+.version {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+
 /* Responsive */
 @media (max-width: 900px) {
   .mapList {

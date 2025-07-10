@@ -2,6 +2,7 @@ import Card from "../components/Card";
 import styles from "../styles/Home.module.css";
 import { maps } from "../utils/maps";
 import { useNavigate } from "react-router-dom";
+import pkg from "../../package.json";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -24,7 +25,7 @@ const Home = () => {
           />
         ))}
       </div>
-      <p className={styles.version}>Versión: BETA 0.1.0</p>
+      <p className={styles.version}>Versión: BETA {pkg.version}</p>
     </div>
   );
 };

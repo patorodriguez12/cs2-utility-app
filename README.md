@@ -4,7 +4,7 @@ This is a web app in development for browsing utilities and tips across CS2 maps
 
 ---
 
-## Version - BETA 0.1.0
+## Version - BETA 0.3.0
 
 ### 🧩 Planned Features
 

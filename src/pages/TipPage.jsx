@@ -1,10 +1,20 @@
-import { useParams } from "react-router-dom";
+// Components imports
+import TipCard from "../components/TipCard";
+import TipVideoModal from "../components/TipVideoModal";
+
+// Utils imports
 import { tips } from "../utils/tips";
 import { maps } from "../utils/maps";
 import { types } from "../utils/types";
-import styles from "../styles/TipPage.module.css";
+
+// React imports
+import { useParams } from "react-router-dom";
 import { useState } from "react";
 
+// Styles imports
+import styles from "../styles/TipPage.module.css";
+
+// TipPage Component
 const TipPage = () => {
   const { mapId, typeId } = useParams();
 
@@ -21,54 +31,21 @@ const TipPage = () => {
 
   return (
     <div className={styles.tipContainer}>
+      {/* TITLE START*/}
       <h1 className={styles.title}>
         {type.name} en <i>{map.name}</i>
       </h1>
-
+      {/* TIP LIST */}
       <div className={styles.tipList}>
-        {filteredTips.map((tip) => {
-          const youtubeId = new URL(tip.videoUrl).searchParams.get("v");
-
-          return (
-            <div
-              key={tip.id}
-              className={styles.card}
-              onClick={() => setActiveVideo(youtubeId)}
-            >
-              <img
-                src={`https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`}
-                alt={tip.title}
-                className={styles.thumbnail}
-              />
-              <p className={styles.caption}>{tip.title}</p>
-            </div>
-          );
-        })}
-        {activeVideo && (
-          <div
-            className={styles.modalOverlay}
-            onClick={() => setActiveVideo(null)}
-          >
-            <div
-              className={styles.modalContent}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <button
-                className={styles.closeButton}
-                onClick={() => setActiveVideo(null)}
-              >
-                ✕
-              </button>
-              <iframe
-                src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1`}
-                frameBorder="0"
-                allow="autoplay; encrypted-media"
-                allowFullScreen
-                title="Video grande"
-              ></iframe>
-            </div>
-          </div>
-        )}
+        {/* CARD MAP */}
+        {filteredTips.map((tip) => (
+          <TipCard key={tip.id} tip={tip} onClick={setActiveVideo} />
+        ))}
+        {/* VIDEO MODAL */}
+        <TipVideoModal
+          videoId={activeVideo}
+          onClose={() => setActiveVideo(null)}
+        />
       </div>
     </div>
   );

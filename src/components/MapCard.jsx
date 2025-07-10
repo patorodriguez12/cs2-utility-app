@@ -1,7 +1,7 @@
 import { useState } from "react";
-import styles from "../styles/Card.module.css";
+import styles from "../styles/MapCard.module.css";
 
-const Card = ({ name, image, logo, onClick }) => {
+const MapCard = ({ name, image, logo, onClick, tipCount }) => {
   const [loaded, setLoaded] = useState(false);
 
   return (
@@ -25,8 +25,11 @@ const Card = ({ name, image, logo, onClick }) => {
 
       {/* Logo (hover effect) */}
       <img src={logo} alt={name} />
+      <div className={styles.tipCount}>
+        {tipCount} {tipCount === 1 ? "tip" : "tips"}
+      </div>
     </div>
   );
 };
 
-export default Card;
+export default MapCard;

@@ -1,20 +1,19 @@
-// Components imports
+// ─── Components ────────────────────────────────────────────
 import TipCard from "../components/TipCard";
 import TipVideoModal from "../components/TipVideoModal";
 
-// Utils imports
+// ─── Data (JSON) ───────────────────────────────────────────
 import { tips } from "../utils/tips";
 import { maps } from "../utils/maps";
 import { types } from "../utils/types";
 
-// React imports
+// ─── External Packages ─────────────────────────────────────
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 
-// Styles imports
+// ─── Styles ────────────────────────────────────────────────
 import styles from "../styles/TipPage.module.css";
 
-// TipPage Component
 const TipPage = () => {
   const { mapId, typeId } = useParams();
 
@@ -27,20 +26,25 @@ const TipPage = () => {
     (tip) => tip.mapId === mapId && tip.type === typeId
   );
 
+
   if (!map || !type) return <div>Error: datos inválidos.</div>;
 
   return (
     <div className={styles.tipContainer}>
-      {/* TITLE START*/}
+
+      {/* Title */}
       <h1 className={styles.title}>
         {type.name} en <i>{map.name}</i>
       </h1>
-      {/* TIP LIST */}
+
+      {/* Tip List */}
       <div className={styles.tipList}>
-        {/* CARD MAP */}
+
+        {/* Card */}
         {filteredTips.map((tip) => (
           <TipCard key={tip.id} tip={tip} onClick={setActiveVideo} />
         ))}
+        
         {/* VIDEO MODAL */}
         <TipVideoModal
           videoId={activeVideo}

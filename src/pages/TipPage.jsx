@@ -13,6 +13,7 @@ import { useState } from "react";
 
 // ─── Styles ────────────────────────────────────────────────
 import styles from "../styles/TipPage.module.css";
+import { BiArrowBack } from "react-icons/bi";
 
 const TipPage = () => {
   const navigate = useNavigate();
@@ -32,14 +33,14 @@ const TipPage = () => {
 
   return (
     <div className={styles.tipContainer}>
-      <button className={styles.backButton} onClick={() => navigate(-1)}>
-        ⬅
-      </button>
-
-      {/* Title */}
-      <h1 className={styles.title}>
-        {type.name} en <i>{map.name}</i>
-      </h1>
+      <div className={styles.headerRow}>
+        <button className={styles.inlineBack} onClick={() => navigate(-1)}>
+          <BiArrowBack size={35} />
+        </button>
+        <h1 className={styles.title}>
+          {type.name} en <i>{map.name}</i>
+        </h1>
+      </div>
 
       {/* Tip List */}
       <div className={styles.tipList}>

@@ -81,24 +81,25 @@
 }
 
 /* ─── Back Button ──────────────────────────────────────────────── */
-.backButton {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  background-color: rgba(255, 165, 0, 0.9);
-  color: white;
-  border: none;
-  padding: 1px 14px;
-  font-size: 1.5rem;
-  border-radius: 10%;
-  cursor: pointer;
-  z-index: 100;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
 }
 
-.backButton:hover {
-  background-color: orangered;
-  transform: scale(1.05);
+.inlineBack {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 1.2rem;
+  transition: transform 0.2s ease;
+}
+
+.inlineBack:hover {
+  transform: scale(1.2);
 }
 
 /* ─── Media Queries ──────────────────────────────────────────────── */
@@ -117,13 +118,13 @@
   }
 
   .title {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
 
   .backButton {
     padding: 8px 12px;
     font-size: 1.2rem;
     top: 15px;
-    left: 15px;
+    left: 50;
   }
 }

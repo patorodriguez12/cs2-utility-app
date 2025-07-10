@@ -7,6 +7,7 @@ import { types } from "../utils/types";
 
 // ─── Styles ────────────────────────────────────────────────
 import styles from "../styles/TipSelectPage.module.css";
+import { BiArrowBack } from "react-icons/bi";
 
 const TipSelectPage = () => {
   const navigate = useNavigate();
@@ -21,15 +22,14 @@ const TipSelectPage = () => {
 
   return (
     <div className={styles.typeContainer}>
-      {/* Back Button */}
-      <button className={styles.backButton} onClick={() => navigate(-1)}>
-        ⬅
-      </button>
-
-      {/* Title */}
-      <h1 className={styles.title}>
-        Elegi la utilidad para <i>{map.name}</i>
-      </h1>
+      <div className={styles.headerRow}>
+        <button className={styles.inlineBack} onClick={() => navigate(-1)}>
+          <BiArrowBack size={35} />
+        </button>
+        <h1 className={styles.title}>
+          Elegi la utilidad para <i>{map.name}</i>
+        </h1>
+      </div>
 
       {/* Tip List */}
       <div className={styles.typeList}>

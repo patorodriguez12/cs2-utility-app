@@ -8,13 +8,15 @@ import { maps } from "../utils/maps";
 import { types } from "../utils/types";
 
 // ─── External Packages ─────────────────────────────────────
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
 
 // ─── Styles ────────────────────────────────────────────────
 import styles from "../styles/TipPage.module.css";
 
 const TipPage = () => {
+  const navigate = useNavigate();
+
   const { mapId, typeId } = useParams();
 
   const [activeVideo, setActiveVideo] = useState(null);
@@ -26,11 +28,13 @@ const TipPage = () => {
     (tip) => tip.mapId === mapId && tip.type === typeId
   );
 
-
   if (!map || !type) return <div>Error: datos inválidos.</div>;
 
   return (
     <div className={styles.tipContainer}>
+      <button className={styles.backButton} onClick={() => navigate(-1)}>
+        ⬅
+      </button>
 
       {/* Title */}
       <h1 className={styles.title}>
@@ -39,12 +43,11 @@ const TipPage = () => {
 
       {/* Tip List */}
       <div className={styles.tipList}>
-
         {/* Card */}
         {filteredTips.map((tip) => (
           <TipCard key={tip.id} tip={tip} onClick={setActiveVideo} />
         ))}
-        
+
         {/* VIDEO MODAL */}
         <TipVideoModal
           videoId={activeVideo}

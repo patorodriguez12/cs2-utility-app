@@ -1,12 +1,49 @@
-# React + Vite
+# 🎯 CS2 Utility App — Smokes and Tips for Counter-Strike 2
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a web app in development for browsing utilities and tips across CS2 maps. Thank you for your interest in the project!
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Version - BETA 0.1
 
-## Expanding the ESLint configuration
+### 🧩 Planned Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Simple login system
+- Select any map
+- Choose the utility type you want
+- View a list of videos filtered by map and utility
+- Add tips to favorites for quick access
+
+---
+
+## ✍️ Commit Message Convention
+
+We follow a simple and effective format:
+
+```
+<type>: <short description in present tense, lowercase>
+```
+
+### Examples:
+
+- `feat: add TipCard component to display tips`
+- `fix: fix filtering bug by type`
+- `refactor: extract video modal into separate component`
+- `style: adjust spacing and formatting`
+- `docs: add contribution guide`
+- `chore: update dependencies`
+- `test: add tests for TipCard`
+
+---
+
+## 🔠 Common Commit Types
+
+| Type       | Description                                                  |
+|------------|--------------------------------------------------------------|
+| `feat`     | Adds a new feature or component                              |
+| `fix`      | Fixes a bug or issue                                         |
+| `refactor` | Improves code structure without changing its behavior        |
+| `style`    | Formatting changes (spacing, indentation, quotes, etc.)      |
+| `docs`     | Documentation-only changes                                   |
+| `test`     | Adds or updates tests                                        |
+| `chore`    | Minor changes like config updates or maintenance tasks       |

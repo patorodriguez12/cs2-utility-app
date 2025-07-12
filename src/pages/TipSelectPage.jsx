@@ -1,5 +1,6 @@
 // ─── Components ────────────────────────────────────────────
 import NotFound from "./NotFound";
+import BackButton from "../components/BackButton";
 
 // ─── External Packages ─────────────────────────────────────
 import { useNavigate, useParams } from "react-router";
@@ -10,7 +11,6 @@ import { types } from "../utils/types";
 
 // ─── Styles ────────────────────────────────────────────────
 import styles from "../styles/TipSelectPage.module.css";
-import { BiArrowBack } from "react-icons/bi";
 
 const TipSelectPage = () => {
   const navigate = useNavigate();
@@ -26,9 +26,7 @@ const TipSelectPage = () => {
   return (
     <div className={styles.typeContainer}>
       <div className={styles.headerRow}>
-        <button className={styles.inlineBack} onClick={() => navigate(-1)}>
-          <BiArrowBack size={35} />
-        </button>
+        <BackButton />
         <h1 className={styles.title}>
           Elegi la utilidad para <i>{map.name}</i>
         </h1>

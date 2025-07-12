@@ -2,6 +2,7 @@
 import TipCard from "../components/TipCard";
 import TipVideoModal from "../components/TipVideoModal";
 import NotFound from "./NotFound";
+import BackButton from "../components/BackButton";
 
 // ─── Data (JSON) ───────────────────────────────────────────
 import { tips } from "../utils/tips";
@@ -9,16 +10,13 @@ import { maps } from "../utils/maps";
 import { types } from "../utils/types";
 
 // ─── External Packages ─────────────────────────────────────
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useState } from "react";
 
 // ─── Styles ────────────────────────────────────────────────
 import styles from "../styles/TipPage.module.css";
-import { BiArrowBack } from "react-icons/bi";
 
 const TipPage = () => {
-  const navigate = useNavigate();
-
   const { mapId, typeId } = useParams();
 
   const [activeVideo, setActiveVideo] = useState(null);
@@ -35,9 +33,7 @@ const TipPage = () => {
   return (
     <div className={styles.tipContainer}>
       <div className={styles.headerRow}>
-        <button className={styles.inlineBack} onClick={() => navigate(-1)}>
-          <BiArrowBack size={35} />
-        </button>
+        <BackButton />
         <h1 className={styles.title}>
           {type.name} en <i>{map.name}</i>
         </h1>

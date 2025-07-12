@@ -13,7 +13,7 @@
   box-shadow: 0 6px 6px var(--accent-color-1);
 }
 
-.mapImage {
+.mapImage:first-of-type {
   width: 100%;
   height: 100%;
   object-fit: cover;

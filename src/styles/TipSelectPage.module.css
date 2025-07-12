@@ -38,7 +38,7 @@
 }
 
 .typeCard:hover {
-  box-shadow: 0 6px 6px var(--tertiary-color);
+  box-shadow: 0 6px 6px var(--accent-color-1);
 }
 
 .typeCard .background {

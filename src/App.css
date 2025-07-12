@@ -1,6 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap");
 
+:root {
+  --primary-color: #1e4554;
+  --secondary-color: #d9d9d9;
+  --tertiary-color: #c7c7c7;
+  --accent-color-1: #e48511;
+  --accent-color-2: #d37525;
+}
+
 body {
   font-family: "Orbitron", sans-serif;
-  background-color: #1e4554;
+  background-color: var(--primary-color);
 }

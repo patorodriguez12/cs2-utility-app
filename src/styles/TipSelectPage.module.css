@@ -33,6 +33,12 @@
   cursor: pointer;
   overflow: hidden;
   border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.typeCard:hover {
+  box-shadow: 0 6px 6px var(--tertiary-color);
 }
 
 .typeCard .background {

@@ -5,6 +5,12 @@
   cursor: pointer;
   overflow: hidden;
   border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 6px 6px var(--accent-color-1);
 }
 
 .mapImage {
@@ -39,7 +45,7 @@
   position: absolute;
   bottom: 10px;
   left: 15px;
-  color: white;
+  color: var(--secondary-color);
   font-weight: bold;
   font-size: 18px;
   z-index: 2;
@@ -50,8 +56,8 @@
   position: absolute;
   bottom: 8px;
   right: 8px;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #fff;
+  background-color: var(--accent-color-1);
+  color: var(--primary-color);
   font-size: 0.85rem;
   padding: 4px 8px;
   border-radius: 6px;
@@ -72,7 +78,7 @@
 .loadingOverlay {
   position: absolute;
   inset: 0;
-  background-color: #e0e0e0;
+  background-color: var(--primary-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,8 +88,8 @@
 .spinner {
   width: 32px;
   height: 32px;
-  border: 4px solid #ccc;
-  border-top-color: #555;
+  border: 4px solid var(--tertiary-color);
+  border-top-color: var(--accent-color-2);
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }

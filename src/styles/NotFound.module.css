@@ -1,8 +1,7 @@
-/* src/styles/NotFound.module.css */
 .container {
   text-align: center;
   padding: 80px 20px;
-  color: white;
+  color: var(--secondary-color);
 }
 
 .title {
@@ -16,9 +15,9 @@
 }
 
 .button {
-  background-color: orange;
+  background-color: var(--accent-color-1);
   border: none;
-  color: white;
+  color: var(--primary-color);
   padding: 12px 24px;
   font-size: 1rem;
   border-radius: 8px;
@@ -27,5 +26,5 @@
 }
 
 .button:hover {
-  background-color: orangered;
+  background-color: var(--accent-color-2);
 }

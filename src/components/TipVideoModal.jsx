@@ -1,4 +1,4 @@
-import styles from "../styles/TipPage.module.css";
+import styles from "../styles/TipVideoModal.module.css";
 
 const TipVideoModal = ({ videoId, onClose }) => {
   if (!videoId) return null;
@@ -6,9 +6,13 @@ const TipVideoModal = ({ videoId, onClose }) => {
   return (
     <div className={styles.modalOverlay} onClick={onClose}>
       <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+
+        {/* Close Button */}
         <button className={styles.closeButton} onClick={onClose}>
           ✕
         </button>
+
+        {/* Embed Video */}
         <iframe
           src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
           frameBorder="0"
